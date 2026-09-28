@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gizlilik Politikası – Ehliyet Sınavına Hazırlan</title>
+<style>
+  :root {
+    --primary: #1a56db;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --bg: #ffffff;
+    --card: #f9fafb;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  header {
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    color: var(--primary);
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    color: var(--text);
+    border-left: 4px solid var(--primary);
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  p, li { font-size: 15.5px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--card);
+    font-weight: 600;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin-bottom: 4px; }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13.5px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Gizlilik Politikası</h1>
+    <div class="meta">Ehliyet Sınavına Hazırlan · Son güncelleme: 28.09.2026</div>
+  </header>
+
+  <div class="toc">
+    <strong>İçindekiler</strong>
+    <ol>
+      <li><a href="#giris">Giriş</a></li>
+      <li><a href="#toplanan-veriler">Toplanan Veriler</a></li>
+      <li><a href="#misafir-modu">Misafir Modu ve Hesaplı Kullanım</a></li>
+      <li><a href="#kullanim-amaci">Verilerin Kullanım Amacı</a></li>
+      <li><a href="#paylasim">Verilerin Üçüncü Taraflarla Paylaşımı</a></li>
+      <li><a href="#reklamlar">Reklamlar ve App Tracking Transparency</a></li>
+      <li><a href="#saklama-guvenlik">Veri Saklama ve Güvenlik</a></li>
+      <li><a href="#haklar">KVKK Kapsamında Haklarınız</a></li>
+      <li><a href="#silme">Hesap ve Veri Silme</a></li>
+      <li><a href="#cocuklar">Çocukların Gizliliği</a></li>
+      <li><a href="#degisiklikler">Politikada Değişiklikler</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ol>
+  </div>
+
+  <h2 id="giris">1. Giriş</h2>
+  <p>
+    Bu Gizlilik Politikası, "<strong>Ehliyet Sınavına Hazırlan</strong>" mobil uygulamasını
+    ("Uygulama") kullanırken hangi kişisel verilerin toplandığını, bu verilerin nasıl
+    kullanıldığını, kimlerle paylaşıldığını ve verileriniz üzerindeki haklarınızı açıklamak
+    amacıyla hazırlanmıştır. Bu metin, 6698 sayılı <strong>Kişisel Verilerin Korunması Kanunu
+    (KVKK)</strong> kapsamında bir aydınlatma metni niteliği de taşımaktadır.
+  </p>
+  <p>
+    Uygulamayı indirip kullanmaya başlamanız, bu politikayı okuduğunuz ve içeriğini kabul
+    ettiğiniz anlamına gelir.
+  </p>
+
+  <h2 id="toplanan-veriler">2. Toplanan Veriler</h2>
+  <p>Uygulama, kullanım şeklinize bağlı olarak aşağıdaki verileri toplayabilir:</p>
+
+  <table>
+    <tr>
+      <th>Veri</th>
+      <th>Ne zaman toplanır</th>
+      <th>Nerede saklanır</th>
+    </tr>
+    <tr>
+      <td>E-posta adresi</td>
+      <td>Hesap oluşturduğunuzda (giriş/kayıt için)</td>
+      <td>Yalnızca Firebase Authentication (kimlik doğrulama sistemi) içinde; uygulamanın veritabanında <strong>tutulmaz</strong></td>
+    </tr>
+    <tr>
+      <td>Şifre</td>
+      <td>Hesap oluşturduğunuzda</td>
+      <td>Firebase Authentication tarafından şifrelenmiş (hash'lenmiş) biçimde saklanır; Uygulama geliştiricisi dahil hiç kimse düz metin şifrenizi göremez</td>
+    </tr>
+    <tr>
+      <td>Kullanıcı adı</td>
+      <td>Hesap oluşturduğunuzda</td>
+      <td>Firebase Firestore veritabanı (liderlik tablosunda diğer kullanıcılara görünür)</td>
+    </tr>
+    <tr>
+      <td>Sınav istatistikleri (doğru/yanlış sayısı, puan, seri/rütbe bilgisi)</td>
+      <td>Sınav çözdüğünüzde, sadece hesaplı kullanımda</td>
+      <td>Firebase Firestore veritabanı</td>
+    </tr>
+    <tr>
+      <td>Yanlış çözülen sorular listesi</td>
+      <td>Sınav sırasında otomatik</td>
+      <td>Yalnızca cihazınızın yerel belleğinde (UserDefaults); herhangi bir sunucuya gönderilmez</td>
+    </tr>
+    <tr>
+      <td>Reklam kimliği (IDFA) ve reklam etkileşim verileri</td>
+      <td>İzin verdiğiniz takdirde, reklam gösterimi sırasında</td>
+      <td>Google AdMob altyapısı (bkz. bölüm 6)</td>
+    </tr>
+    <tr>
+      <td>Satın alma bilgisi (Premium)</td>
+      <td>Premium satın aldığınızda</td>
+      <td>İşlem tamamen Apple App Store üzerinden yürütülür; kredi kartı bilgisi Uygulama veya geliştirici tarafından görülmez ya da saklanmaz</td>
+    </tr>
+  </table>
+
+  <p>
+    Uygulama; adınızı, konumunuzu, telefon rehberinizi, fotoğraflarınızı veya cihazınızdaki
+    başka bir kişisel içeriği <strong>toplamaz</strong>.
+  </p>
+
+  <h2 id="misafir-modu">3. Misafir Modu ve Hesaplı Kullanım</h2>
+  <p>
+    Uygulamayı hesap oluşturmadan, <strong>Misafir Modu</strong> ile de kullanabilirsiniz.
+    Misafir modunda:
+  </p>
+  <ul>
+    <li>Hiçbir kişisel veri (e-posta, kullanıcı adı vb.) sunucularımıza gönderilmez.</li>
+    <li>Tüm ilerleme ve istatistikler sadece kendi cihazınızda tutulur.</li>
+    <li>Liderlik tablosuna katılamaz, çoklu cihaz senkronizasyonu yapamazsınız.</li>
+  </ul>
+  <p>
+    Hesap oluşturmak tamamen isteğe bağlıdır ve sadece liderlik tablosu / çoklu cihaz
+    senkronizasyonu gibi ek özelliklerden yararlanmak isteyenler için sunulur.
+  </p>
+
+  <h2 id="kullanim-amaci">4. Verilerin Kullanım Amacı</h2>
+  <p>Toplanan veriler şu amaçlarla kullanılır:</p>
+  <ul>
+    <li>Hesabınızı oluşturmak, giriş yapmanızı sağlamak ve güvenliğini korumak,</li>
+    <li>Sınav istatistiklerinizi ve ilerlemenizi cihazlar arasında senkronize etmek,</li>
+    <li>Liderlik tablosu (günlük/haftalık sıralama) özelliğini sunmak,</li>
+    <li>Uygulamanın ücretsiz sürümünde reklam göstermek,</li>
+    <li>Uygulamanın hatalarını tespit etmek ve genel kullanım kalitesini iyileştirmek.</li>
+  </ul>
+  <p>
+    Verileriniz hiçbir şekilde pazarlama amacıyla üçüncü taraflara satılmaz veya
+    kiralanmaz.
+  </p>
+
+  <h2 id="paylasim">5. Verilerin Üçüncü Taraflarla Paylaşımı</h2>
+  <p>
+    Uygulama, alt yapı hizmeti almak amacıyla aşağıdaki üçüncü taraf servisleri kullanır.
+    Bu servislere yalnızca hizmetin çalışması için gerekli olan veri iletilir:
+  </p>
+
+  <div class="card">
+    <h3>Google Firebase (Authentication &amp; Firestore)</h3>
+    <p>
+      Kimlik doğrulama ve veritabanı hizmeti için Google'ın Firebase altyapısını
+      kullanıyoruz. E-posta/şifre bilgileriniz Firebase Authentication'da, kullanıcı adı ve
+      sınav istatistikleriniz Firebase Firestore'da saklanır. Firebase'in kendi gizlilik
+      politikasına
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">buradan</a>
+      ulaşabilirsiniz.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Google AdMob</h3>
+    <p>
+      Uygulamanın ücretsiz sürümünde reklam göstermek için Google AdMob kullanılır. AdMob,
+      izninize bağlı olarak reklam kimliğiniz (IDFA) üzerinden ilgi alanına dayalı reklam
+      gösterebilir. İzin vermezseniz, kişiselleştirilmemiş (genel) reklamlar gösterilir.
+      Detaylar için
+      <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google reklam politikaları</a>
+      sayfasını inceleyebilirsiniz.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Apple App Store</h3>
+    <p>
+      Premium satın alma işlemi tamamen Apple'ın App Store altyapısı (StoreKit) üzerinden
+      yürütülür. Ödeme bilgileriniz Apple tarafından işlenir; Uygulama veya geliştirici bu
+      bilgilere erişemez.
+    </p>
+  </div>
+
+  <h2 id="reklamlar">6. Reklamlar ve App Tracking Transparency (ATT)</h2>
+  <p>
+    iOS 14 ve üzeri sürümlerde, uygulamayı ilk açtığınızda "İzin İste" (App Tracking
+    Transparency) penceresi karşınıza çıkar. Bu pencerede:
+  </p>
+  <ul>
+    <li><strong>İzin verirseniz:</strong> Size daha ilgili reklamlar gösterilebilir.</li>
+    <li><strong>İzin vermezseniz:</strong> Uygulama normal şekilde çalışmaya devam eder,
+      sadece kişiselleştirilmemiş reklamlar gösterilir.</li>
+  </ul>
+  <p>
+    Premium satın alarak reklamları tamamen kaldırabilirsiniz.
+  </p>
+
+  <h2 id="saklama-guvenlik">7. Veri Saklama ve Güvenlik</h2>
+  <ul>
+    <li>Verileriniz, Google'ın Firebase altyapısında endüstri standardı güvenlik
+      önlemleriyle (erişim kontrolü, şifreleme) korunur.</li>
+    <li>Veritabanı erişim kuralları, her kullanıcının yalnızca kendi verisine
+      okuma/yazma/silme yetkisi olacak şekilde yapılandırılmıştır; başka bir kullanıcının
+      verisine erişim teknik olarak engellenmiştir.</li>
+    <li>Şifreniz hiçbir zaman düz metin olarak saklanmaz.</li>
+    <li>Hesabınızla ilişkili veriler, hesabınız aktif olduğu sürece saklanır; hesabınızı
+      sildiğinizde ilgili tüm veriler kalıcı olarak silinir (bkz. bölüm 9).</li>
+  </ul>
+
+  <h2 id="haklar">8. KVKK Kapsamında Haklarınız</h2>
+  <p>
+    6698 sayılı KVKK'nın 11. maddesi uyarınca kişisel verilerinizle ilgili olarak şu
+    haklara sahipsiniz:
+  </p>
+  <ul>
+    <li>Kişisel verinizin işlenip işlenmediğini öğrenme,</li>
+    <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+    <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+    <li>Yurt içinde/yurt dışında verilerin aktarıldığı üçüncü kişileri bilme,</li>
+    <li>Eksik/yanlış işlenmişse düzeltilmesini isteme,</li>
+    <li>KVKK'da öngörülen şartlar çerçevesinde silinmesini/yok edilmesini isteme,</li>
+    <li>Bu işlemlerin, verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+    <li>Otomatik sistemlerle analiz sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz
+      etme,</li>
+    <li>Kanuna aykırı işlenme nedeniyle zarara uğramanız halinde zararın giderilmesini
+      talep etme.</li>
+  </ul>
+  <p>
+    Bu haklarınızı kullanmak için bölüm 12'deki iletişim adresinden bize
+    ulaşabilirsiniz.
+  </p>
+
+  <h2 id="silme">9. Hesap ve Veri Silme</h2>
+  <p>
+    Hesabınızı ve hesabınızla ilişkili tüm verileri Uygulama içinden, herhangi bir
+    destek talebine ihtiyaç duymadan, doğrudan silebilirsiniz:
+  </p>
+  <p><strong>Uygulama içi yol:</strong> Profil / Ayarlar → "Hesabımı Sil"</p>
+  <p>
+    Bu işlem gerçekleştirildiğinde:
+  </p>
+  <ul>
+    <li>Firebase Authentication'daki hesabınız (e-posta, şifre) kalıcı olarak silinir,</li>
+    <li>Firestore veritabanındaki kullanıcı adınız ve sınav istatistikleriniz kalıcı
+      olarak silinir,</li>
+    <li>Bu işlem <strong>geri alınamaz</strong>.</li>
+  </ul>
+  <p>
+    Cihazınızda yerel olarak tutulan veriler (örn. yanlış çözülen sorular listesi),
+    Uygulamayı cihazınızdan kaldırdığınızda otomatik olarak silinir.
+  </p>
+
+  <h2 id="cocuklar">10. Çocukların Gizliliği</h2>
+  <p>
+    Uygulama, sürücü adaylarına (genel olarak ehliyet almaya hak kazanma yaşındaki
+    kullanıcılara) yöneliktir. 13 yaşın altındaki çocuklardan bilerek kişisel veri
+    toplanmaz. Bu yaş grubundaki bir kullanıcının veri gönderdiğini fark etmemiz halinde
+    ilgili veriler derhal silinir.
+  </p>
+
+  <h2 id="degisiklikler">11. Politikada Değişiklikler</h2>
+  <p>
+    Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler olması
+    halinde, güncel metin bu sayfada yayınlanacak ve sayfanın üst kısmındaki
+    "Son güncelleme" tarihi güncellenecektir.
+  </p>
+
+  <h2 id="iletisim">12. İletişim</h2>
+  <p>
+    Gizlilik politikası veya kişisel verilerinizle ilgili sorularınız için bizimle iletişime
+    geçebilirsiniz:
+  </p>
+  <p>
+    <strong>E-posta:</strong> <a href="mailto:serdargunees@gmail.com">serdargunees@gmail.com</a>
+  </p>
+
+  <footer>
+    © 2026 Ehliyet Sınavına Hazırlan. Tüm hakları saklıdır.
+  </footer>
+
+</div>
+</body>
+</html>
