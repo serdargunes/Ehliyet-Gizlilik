@@ -103,7 +103,7 @@
 
   <header>
     <h1>Gizlilik Politikası</h1>
-    <div class="meta">Ehliyet Sınavına Hazırlan · Son güncelleme: 28.09.2026</div>
+    <div class="meta">Ehliyet Sınavına Hazırlan · Son güncelleme: 02.10.2026</div>
   </header>
 
   <div class="toc">
@@ -162,7 +162,7 @@
       <td>Firebase Firestore veritabanı (liderlik tablosunda diğer kullanıcılara görünür)</td>
     </tr>
     <tr>
-      <td>Sınav istatistikleri (doğru/yanlış sayısı, puan, seri/rütbe bilgisi)</td>
+      <td>Sınav istatistikleri (doğru/yanlış sayısı, puan)</td>
       <td>Sınav çözdüğünüzde, sadece hesaplı kullanımda</td>
       <td>Firebase Firestore veritabanı</td>
     </tr>
@@ -221,13 +221,24 @@
   <ul>
     <li>Hesabınızı oluşturmak, giriş yapmanızı sağlamak ve güvenliğini korumak,</li>
     <li>Sınav istatistiklerinizi ve ilerlemenizi cihazlar arasında senkronize etmek,</li>
-    <li>Liderlik tablosu (günlük/haftalık sıralama) özelliğini sunmak,</li>
+    <li>Liderlik tablosu (tek, genel sıralama) özelliğini sunmak,</li>
     <li>Uygulamanın ücretsiz sürümünde reklam göstermek,</li>
     <li>Uygulamanın hatalarını tespit etmek ve genel kullanım kalitesini iyileştirmek.</li>
   </ul>
   <p>
     Verileriniz hiçbir şekilde pazarlama amacıyla üçüncü taraflara satılmaz veya
     kiralanmaz.
+  </p>
+
+  <h3>Liderlik Tablosunda Görünen Bilgiler</h3>
+  <p>
+    Hesap oluşturup en az 3 sınav tamamladığınızda; kullanıcı adınız, toplam puanınız ve
+    tamamladığınız sınav sayısı Uygulamadaki liderlik tablosunda (Sıralama) yer alır ve
+    Uygulamada oturum açmış diğer kullanıcılar tarafından görülebilir. E-posta adresiniz ve
+    diğer hesap bilgileriniz liderlik tablosunda hiçbir zaman gösterilmez. Bu nedenle
+    kullanıcı adınızda adınızı, soyadınızı veya sizi tanımlayabilecek başka bir bilgiyi
+    kullanmamanızı öneririz. Hesabınızı sildiğinizde liderlik tablosundaki kaydınız da
+    kalıcı olarak silinir.
   </p>
 
   <h2 id="paylasim">5. Verilerin Üçüncü Taraflarla Paylaşımı</h2>
@@ -287,13 +298,25 @@
   <ul>
     <li>Verileriniz, Google'ın Firebase altyapısında endüstri standardı güvenlik
       önlemleriyle (erişim kontrolü, şifreleme) korunur.</li>
-    <li>Veritabanı erişim kuralları, her kullanıcının yalnızca kendi verisine
-      okuma/yazma/silme yetkisi olacak şekilde yapılandırılmıştır; başka bir kullanıcının
-      verisine erişim teknik olarak engellenmiştir.</li>
+    <li>Veritabanı erişim kuralları, her kullanıcının yalnızca kendi verisini
+      değiştirebilecek (yazma/silme) şekilde yapılandırılmıştır; başka bir kullanıcının
+      verisini değiştirmesi teknik olarak engellenmiştir. Liderlik tablosuna katılan
+      kullanıcıların adı ve puanı ise tasarım gereği diğer kullanıcılara açık şekilde
+      gösterilir (bkz. bölüm 4).</li>
     <li>Şifreniz hiçbir zaman düz metin olarak saklanmaz.</li>
     <li>Hesabınızla ilişkili veriler, hesabınız aktif olduğu sürece saklanır; hesabınızı
       sildiğinizde ilgili tüm veriler kalıcı olarak silinir (bkz. bölüm 9).</li>
   </ul>
+
+  <h3>Kullanılmayan Hesaplar</h3>
+  <p>
+    Kişisel verilerin gereğinden uzun süre saklanmaması amacıyla, 2 (iki) yıl boyunca hiç
+    giriş yapılmayan hesaplar ve bu hesaplarla ilişkili veriler silinebilir. Şu an için bu
+    silme işlemini otomatik olarak gerçekleştiren bir sistem bulunmamaktadır; böyle bir
+    uygulama başlatıldığında bu politika güncellenecek ve kullanıcılar önceden
+    bilgilendirilecektir. Hesabınızı dilediğiniz zaman Uygulama içinden kendiniz de
+    silebilirsiniz (bkz. bölüm 9).
+  </p>
 
   <h2 id="haklar">8. KVKK Kapsamında Haklarınız</h2>
   <p>
@@ -334,8 +357,11 @@
     <li>Bu işlem <strong>geri alınamaz</strong>.</li>
   </ul>
   <p>
-    Cihazınızda yerel olarak tutulan veriler (örn. yanlış çözülen sorular listesi),
-    Uygulamayı cihazınızdan kaldırdığınızda otomatik olarak silinir.
+    Cihazınızda yerel olarak tutulan veriler (sınav istatistikleri, yanlış çözülen sorular
+    listesi) hesabınızı sildiğinizde cihazınızdan da otomatik olarak temizlenir; ayrıca
+    Uygulamayı cihazınızdan kaldırdığınızda tüm yerel veriler zaten silinir. Reklam
+    ortağımız Google'ın (AdMob) kendi sistemlerinde tuttuğu reklam verileri bu işlemle
+    silinmez; bu veriler Google'ın gizlilik politikasına tabidir (bkz. bölüm 6).
   </p>
 
   <h2 id="cocuklar">10. Çocukların Gizliliği</h2>
