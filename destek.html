@@ -4,85 +4,157 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Destek · Ehliyet Sınavına Hazırlan</title>
-<meta name="description" content="Ehliyet Sınavına Hazırlan uygulaması için destek ve sık sorulan sorular.">
+<meta name="description" content="Ehliyet Sınavına Hazırlan uygulaması için destek, iletişim ve sık sorulan sorular.">
+<link rel="icon" href="ikon.png">
 <style>
-  :root { --bg:#f4f6fb; --card:#fff; --text:#14172b; --muted:#5b6078; --accent:#3d5cff; --line:#e3e6f0; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#0f111a; --card:#181b28; --text:#eceefa; --muted:#a3a8c3; --accent:#8fa3ff; --line:#2a2e42; }
+  :root {
+    --navy:#02226f; --navy-2:#033a9c; --blue:#1e6bff; --cyan:#2bb4ff;
+    --bg:#f3f6fd; --card:#ffffff; --text:#0e1633; --muted:#586082; --line:#e1e6f4;
+    --chip:#e8efff; --chip-text:#1a4fd6; --shadow:0 10px 30px rgba(2,34,111,.10);
   }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
-  h1 { font-size: 1.8rem; margin: 0 0 4px; }
-  .sub { color: var(--muted); margin: 0 0 28px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; margin-bottom: 16px; }
-  h2 { font-size: 1.1rem; margin: 0 0 8px; }
-  p { margin: 0 0 8px; }
-  a { color: var(--accent); }
-  details { border-top: 1px solid var(--line); padding: 12px 0; }
-  details:first-of-type { border-top: 0; }
-  summary { cursor: pointer; font-weight: 600; }
-  details p { margin-top: 8px; color: var(--muted); }
-  footer { color: var(--muted); font-size: .9rem; margin-top: 24px; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#080d1e; --card:#121a33; --text:#eaf0ff; --muted:#9fabd0; --line:#202a4a;
+      --chip:#17254d; --chip-text:#8db0ff; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; }
+  a { color:var(--blue); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  /* Hero */
+  .hero { background:radial-gradient(1200px 500px at 80% -10%, rgba(43,180,255,.35), transparent 60%),
+                     linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);
+          color:#fff; padding:56px 20px 96px; text-align:center; }
+  .hero .icon { width:104px; height:104px; border-radius:24px; box-shadow:0 14px 36px rgba(0,0,0,.35); display:block; margin:0 auto 20px; }
+  .hero h1 { margin:0; font-size:clamp(1.7rem,4.5vw,2.4rem); letter-spacing:-.02em; line-height:1.2; }
+  .hero p { margin:10px auto 0; max-width:520px; color:rgba(255,255,255,.82); font-size:1.05rem; }
+  .btn { display:inline-block; margin-top:24px; padding:13px 26px; border-radius:999px; background:#fff; color:var(--navy);
+         font-weight:650; box-shadow:0 8px 22px rgba(0,0,0,.25); transition:transform .15s ease; }
+  .btn:hover { transform:translateY(-2px); text-decoration:none; }
+  .mail-note { margin-top:12px; font-size:.9rem; color:rgba(255,255,255,.7); }
+
+  main { max-width:880px; margin:-56px auto 0; padding:0 20px 56px; position:relative; }
+
+  /* Topic cards */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; }
+  .topic { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px; box-shadow:var(--shadow); }
+  .topic .ico { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; font-size:1.3rem;
+                background:linear-gradient(135deg,var(--blue),var(--cyan)); margin-bottom:12px; }
+  .topic h3 { margin:0 0 4px; font-size:1rem; }
+  .topic p { margin:0; color:var(--muted); font-size:.93rem; line-height:1.5; }
+
+  /* Sections */
+  section { margin-top:36px; }
+  h2 { font-size:1.35rem; letter-spacing:-.01em; margin:0 0 14px; }
+  .faq { background:var(--card); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); overflow:hidden; }
+  details { border-top:1px solid var(--line); }
+  details:first-child { border-top:0; }
+  summary { list-style:none; cursor:pointer; padding:18px 22px; font-weight:600; display:flex; justify-content:space-between; gap:16px; align-items:center; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:"+"; flex:none; width:28px; height:28px; border-radius:50%; display:grid; place-items:center;
+                   background:var(--chip); color:var(--chip-text); font-weight:700; transition:transform .2s ease; }
+  details[open] summary::after { content:"–"; }
+  details[open] summary { color:var(--blue); }
+  details .body { padding:0 22px 18px; color:var(--muted); }
+  details .body p { margin:0 0 8px; }
+
+  /* Contact box */
+  .contact { background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%); color:#fff; border-radius:22px;
+             padding:28px 24px; text-align:center; box-shadow:var(--shadow); }
+  .contact h2 { color:#fff; margin-bottom:6px; }
+  .contact p { margin:0 auto; max-width:520px; color:rgba(255,255,255,.82); }
+  .contact .btn { margin-top:18px; }
+
+  .legal { color:var(--muted); font-size:.9rem; text-align:center; margin-top:36px; }
+  .legal a { margin:0 8px; }
+  .legal p { margin:6px 0 0; }
 </style>
 </head>
 <body>
-<main>
+
+<header class="hero">
+  <img class="icon" src="ikon.png" alt="Ehliyet Sınavına Hazırlan uygulama simgesi" width="104" height="104">
   <h1>Ehliyet Sınavına Hazırlan</h1>
-  <p class="sub">Destek ve sık sorulan sorular</p>
+  <p>Destek merkezi. Bir sorunuz ya da sorununuz varsa buradayız.</p>
+  <a class="btn" href="mailto:sgndijital@gmail.com?subject=Ehliyet%20S%C4%B1nav%C4%B1na%20Haz%C4%B1rlan%20Destek">Bize e-posta gönderin</a>
+  <div class="mail-note">sgndijital@gmail.com · Genellikle 1-2 iş günü içinde yanıtlıyoruz</div>
+</header>
 
-  <section class="card">
-    <h2>Bize ulaşın</h2>
-    <p>Bir sorun, öneri ya da hatalı soru bildirimi için e-posta gönderebilirsiniz:</p>
-    <p><a href="mailto:sgndijital@gmail.com">sgndijital@gmail.com</a></p>
-    <p>E-postalara genellikle 1-2 iş günü içinde yanıt verilir. Sıralamada rahatsız edici bir kullanıcı adı görürseniz, uygulamadaki <strong>Bildir</strong> düğmesiyle de bize bildirebilirsiniz. Bildirimler 24 saat içinde incelenir.</p>
-  </section>
+<main>
 
-  <section class="card">
+  <div class="grid">
+    <div class="topic"><div class="ico">👤</div><h3>Hesap ve giriş</h3><p>Hesap açma, şifre sıfırlama ve hesabı silme.</p></div>
+    <div class="topic"><div class="ico">🏆</div><h3>Sıralama</h3><p>Kullanıcı adı, bildirme ve engelleme işlemleri.</p></div>
+    <div class="topic"><div class="ico">💎</div><h3>Premium</h3><p>Tek seferlik satın alma ve geri yükleme.</p></div>
+    <div class="topic"><div class="ico">📝</div><h3>Sorular</h3><p>Hatalı bir soru ya da cevap mı gördünüz? Bize yazın.</p></div>
+  </div>
+
+  <section>
     <h2>Sık sorulan sorular</h2>
+    <div class="faq">
 
-    <details>
-      <summary>Hesap açmak zorunlu mu?</summary>
-      <p>Hayır. Uygulamayı misafir olarak kullanabilirsiniz. Hesap yalnızca Sıralama'da yer almak içindir.</p>
-    </details>
+      <details>
+        <summary>Hesap açmak zorunlu mu?</summary>
+        <div class="body"><p>Hayır. Uygulamayı misafir olarak kullanabilirsiniz. Hesap yalnızca Sıralama'da yer almak içindir.</p></div>
+      </details>
 
-    <details>
-      <summary>Hesabımı nasıl silerim?</summary>
-      <p>Profil → Ayarlar → Hesabımı Sil yolunu izleyin. Hesabınız ve ilgili veriler kalıcı olarak silinir.</p>
-    </details>
+      <details>
+        <summary>Hesabımı nasıl silerim?</summary>
+        <div class="body"><p>Profil → Ayarlar → <strong>Hesabımı Sil</strong> yolunu izleyin. Hesabınız ve ilgili veriler kalıcı olarak silinir.</p></div>
+      </details>
 
-    <details>
-      <summary>Şifremi unuttum, ne yapmalıyım?</summary>
-      <p>Giriş ekranındaki "Şifremi Unuttum" bağlantısıyla e-posta adresinize bir sıfırlama bağlantısı gönderebilirsiniz. E-posta gelmezse spam klasörünüzü kontrol edin.</p>
-    </details>
+      <details>
+        <summary>Şifremi unuttum, ne yapmalıyım?</summary>
+        <div class="body"><p>Giriş ekranındaki <strong>Şifremi Unuttum</strong> bağlantısıyla e-posta adresinize bir sıfırlama bağlantısı gönderebilirsiniz. E-posta gelmezse spam klasörünüzü kontrol edin.</p></div>
+      </details>
 
-    <details>
-      <summary>Bir kullanıcıyı nasıl engellerim?</summary>
-      <p>Sıralama ekranında ilgili kullanıcının satırında <strong>Engelle</strong> düğmesine dokunun. Engellediğiniz kullanıcılar cihazınızda gizlenir. Engeli Ayarlar → Hesap → Engellenen Kullanıcılar bölümünden kaldırabilirsiniz.</p>
-    </details>
+      <details>
+        <summary>Bir kullanıcıyı nasıl engellerim ya da bildiririm?</summary>
+        <div class="body">
+          <p>Sıralama ekranında ilgili kullanıcının satırındaki <strong>Bildir</strong> ve <strong>Engelle</strong> düğmelerini kullanın. Engellediğiniz kullanıcılar cihazınızda gizlenir; engeli Ayarlar → Hesap → Engellenen Kullanıcılar bölümünden kaldırabilirsiniz.</p>
+          <p>Bildirimler 24 saat içinde incelenir. Gerekirse kullanıcı adı kaldırılır ya da hesap kapatılır.</p>
+        </div>
+      </details>
 
-    <details>
-      <summary>Premium nedir, satın alımımı nasıl geri yüklerim?</summary>
-      <p>Premium tek seferlik bir satın alımdır, abonelik değildir. Reklamları kaldırır ve yanlış çözdüğünüz soruları tekrar çözmenizi sağlar. Cihaz değiştirdiyseniz Premium ekranındaki <strong>Satın Alımları Geri Yükle</strong> düğmesini kullanın.</p>
-    </details>
+      <details>
+        <summary>Premium nedir? Satın alımımı nasıl geri yüklerim?</summary>
+        <div class="body"><p>Premium tek seferlik bir satın alımdır, abonelik değildir. Reklamları kaldırır ve yanlış çözdüğünüz soruları tekrar çözmenizi sağlar. Cihaz değiştirdiyseniz Premium ekranındaki <strong>Satın Alımları Geri Yükle</strong> düğmesini kullanın.</p></div>
+      </details>
 
-    <details>
-      <summary>Bir soruda hata gördüm, ne yapmalıyım?</summary>
-      <p>Soru numarasını ve hatayı e-posta ile bize iletin. İnceleyip düzeltiriz.</p>
-    </details>
+      <details>
+        <summary>Bir soruda hata gördüm, ne yapmalıyım?</summary>
+        <div class="body"><p>Soru metnini ve gördüğünüz hatayı e-posta ile bize iletin. İnceleyip düzeltiriz.</p></div>
+      </details>
 
-    <details>
-      <summary>Uygulama resmî bir kurumla bağlantılı mı?</summary>
-      <p>Hayır. Bu uygulama Milli Eğitim Bakanlığı veya başka bir resmî kurumla bağlantılı değildir. Sorular 2015–2018 dönemi sınavlarından derlenmiştir; güncel mevzuat farklı olabilir ve başarı garantisi verilmez.</p>
-    </details>
+      <details>
+        <summary>Uygulama resmî bir kurumla bağlantılı mı?</summary>
+        <div class="body"><p>Hayır. Bu uygulama Milli Eğitim Bakanlığı veya başka bir resmî kurumla bağlantılı değildir. Sorular 2015–2018 dönemi sınavlarından derlenmiştir; güncel mevzuat farklı olabilir ve başarı garantisi verilmez.</p></div>
+      </details>
+
+      <details>
+        <summary>Verilerim nasıl işleniyor?</summary>
+        <div class="body"><p>Ayrıntılar <a href="index.html">Gizlilik Politikası</a> sayfasında yer alır.</p></div>
+      </details>
+
+    </div>
   </section>
 
-  <section class="card">
-    <h2>Gizlilik</h2>
-    <p>Verilerinizin nasıl işlendiğini <a href="https://serdargunes.github.io/Ehliyet-Gizlilik/">Gizlilik Politikası</a> sayfasında bulabilirsiniz.</p>
+  <section class="contact">
+    <h2>Aradığınızı bulamadınız mı?</h2>
+    <p>Sorunuzu yazın, size en kısa sürede dönelim. Cihaz modeli ve iOS sürümünü eklerseniz sorunu daha hızlı çözeriz.</p>
+    <a class="btn" href="mailto:sgndijital@gmail.com?subject=Ehliyet%20S%C4%B1nav%C4%B1na%20Haz%C4%B1rlan%20Destek">sgndijital@gmail.com</a>
   </section>
 
-  <footer>© 2026 SGN Dijital</footer>
+  <div class="legal">
+    <a href="index.html">Gizlilik Politikası</a>
+    <p>© 2026 SGN Dijital</p>
+  </div>
+
 </main>
 </body>
 </html>
